@@ -1,0 +1,20 @@
+[core]
+	editor = nvim
+[user]
+	name =  # Fill this in
+	email =  # Fill this in
+[alias]
+	c = commit
+	a = add
+	p = push
+	aa= !git add -u && git add . && git status
+	st = status
+	pl = pull
+	co = checkout
+	cob = checkout -b
+	#up = !git fetch origin && git rebase origin/master
+	#ir = !git rebase -i origin/master
+	#done = !git fetch && git rebase origin/master && git checkout master && git merge @{-1} && rake && git push
+	last = log -1 HEAD
+[push]
+	default = simple
