@@ -8,8 +8,6 @@ alias ls='ls -G'
 alias ku='kubectl describe nodes | grep -A 2 -e "^\\s*CPU Requests"'
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com.'
 alias kdp='kubectl describe pod'
-# alias med="kubectl describe pod `kubectl get pods -l app=corporate-site | tail -n1 | awk {'print $1'}`"
-# alias medlog="kubectl logs `kubectl get pods -l app=corporate-site | tail -n1 | awk {'print $1'}` -c corporate-site"
 alias kb="kubectl exec -it"
 alias nodepods="kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-namespaces"
 alias nodepods_u="kubectl get pod -o=custom-columns=NODE:.spec.nodeName,NAME:.metadata.name --all-namespaces | awk '!seen[$1]++'"
