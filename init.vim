@@ -19,9 +19,13 @@ call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('scrooloose/nerdtree')
 call dein#add('tmhedberg/SimpylFold')
-call dein#add('wadackel/vim-dogrun')
 call dein#add('itchyny/lightline.vim')
 call dein#add('fatih/vim-go')
+call dein#add('ntpeters/vim-better-whitespace')
+call dein#add('jjo/vim-cue')
+
+" Themes
+call dein#add('joshdick/onedark.vim')
 
 
 " Required:
@@ -39,11 +43,30 @@ endif
 
 " Visual
 set background=dark
-colorscheme dogrun
+colorscheme onedark
+
+" Formatting
+set softtabstop=0 noexpandtab  " default
+set tabstop=2
+set shiftwidth=2
+set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
+set autoindent
+set fileformat=unix
+set expandtab
+set textwidth=790
+au BufNewFile,BufRead *.py set tabstop=4
+      \|set softtabstop=4
+      \|set shiftwidth=4
+
+au BufNewFile,BufRead *.cue,*.sh set tabstop=4
+      \|set autoindent
+      \|set noexpandtab
+      \|set tabstop=4
+      \|set shiftwidth=4
 
 " Misc
 set clipboard=unnamed
-set relativenumber
+set number
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -53,6 +76,11 @@ nnoremap <silent> vv <C-w>v
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+" go
+map <F9> :GoBuild<CR>
+map <F10> :GoRun<CR>
+
 let NERDTreeShowHidden=1
 autocmd WinEnter * if exists('b:NERDTree') | execute 'normal R' | endif
 " P.S: Better to include it into an augroup
@@ -62,6 +90,3 @@ let g:SimpylFold_docstring_preview=1
 
 " Lightline
 call dein#add('itchyny/lightline.vim')
-let g:lightline = {
-  \ 'colorscheme': 'dogrun',
-  \ }
