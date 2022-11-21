@@ -1,0 +1,41 @@
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
+repo = 'SirVer/ultisnips'
+
+[[plugins]]
+repo = 'honza/vim-snippets'
+
+[[plugins]]
+repo = 'thomasfaingnaert/vim-lsp-snippets'
+
+[[plugins]]
+repo = 'thomasfaingnaert/vim-lsp-ultisnips'
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip'
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip-integ'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'folke/tokyonight.nvim'
+
+[[plugins]]
+repo = 'ntpeters/vim-better-whitespace'
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
